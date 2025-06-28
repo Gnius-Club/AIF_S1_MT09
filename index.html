@@ -1,24 +1,284 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Sesión 9: Dando Movimiento al Ensamblaje</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
-  <script src="script.js"></script>
-</body>
 
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 9: Dando Movimiento al Ensamblaje</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="timer">⏱️ 00:00</span>
+                <button id="startStop">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+
+            <div class="sidebar-info">
+                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+
+            <!-- SECCIÓN "DE UN VISTAZO" (ANTES ACTIVITY-0) -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
+                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
+                <div class="overview-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Objetivos:</strong>
+                                    <ul>
+                                        <li>Que los estudiantes aprendan a aplicar Mates de movimiento como 'Revolute' y 'Slider'.</li>
+                                        <li>Que refuercen la colaboración con el ecosistema de IA (Dupla Dinámica) para resolver problemas cinemáticos.</li>
+                                        <li>Que aprendan a identificar el tipo de movimiento correcto y a depurar ensamblajes funcionales.</li>
+                                    </ul>
+                                    <strong>Secuencia de Clase:</strong>
+                                    <ul>
+                                        <li><strong class="tactic-highlight">⚡Saludo Interactivo con IA:</strong> Activación y contextualización de la misión.</li>
+                                        <li><strong class="tactic-highlight">⚡"I Can Statement" + Desafío:</strong> Clarificación de objetivos y presentación del reto del día.</li>
+                                        <li><strong class="tactic-highlight">⚡AI GYM:</strong> Diálogo estratégico con Xolo para la conceptualización.</li>
+                                        <li><strong class="tactic-highlight">⚡Brain Spark:</strong> Ejecución técnica y práctica aumentada por la Dupla Dinámica.</li>
+                                        <li><strong class="tactic-highlight">⚡Gnius STORM:</strong> Showcase de prototipos, síntesis y reflexión.</li>
+                                    </ul>
+                                    <strong>Entregable Clave:</strong>
+                                    <ul>
+                                        <li>Un ensamblaje funcional en Onshape con al menos un grado de libertad (giro o deslizamiento) funcionando de manera predecible y correcta.</li>
+                                        <li>El estado del ensamblaje guardado como una nueva versión.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <strong>Materiales Específicos:</strong>
+                                    <ul>
+                                        <li>Proyector o pantalla interactiva.</li>
+                                        <li>Conexión a internet estable.</li>
+                                        <li>Cuentas de Onshape para cada alumno.</li>
+                                        <li>Chat "Agente Gnius" (Xolo) activo y funcionando.</li>
+                                        <li>Presentación de diapositivas (Diapositivas 1-11).</li>
+                                    </ul>
+                                    <strong>Preparación Previa para ESTA Sesión:</strong>
+                                    <ol>
+                                        <li><strong>Revisión de Misión (Interna):</strong>
+                                            <ul>
+                                                <li>Verificar el correcto funcionamiento de Onshape y Xolo.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Familiarización:</strong> Repasar la diferencia entre 'Revolute Mate' (giro) y 'Slider Mate' (deslizamiento) y el proceso de depuración (editar un mate, invertir dirección).</li>
+                                        <li><strong>Preparación de Ejemplos:</strong> Tener un ensamblaje simple con al menos 3 piezas listo. Demostrar en vivo cómo eliminar un 'Fastened Mate' y reemplazarlo por un 'Revolute Mate', y luego arrastrar la pieza para mostrar el movimiento.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
+
+            <div class="activity-card" id="activity-1">
+                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
+                <p>Introducir la sesión como el momento de dar vida y movimiento a los ensamblajes estáticos.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Bienvenida y Contexto de la Misión ⏰ 1 minuto</h3>
+                            <p>(Proyectar Diapositiva 2) El facilitador presenta la misión de convertir los ensamblajes de "fotografías" a "películas".</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Saludos. Sus ensamblajes son estáticos, como una fotografía. Hoy, los convertiremos en una película. Introduciremos las reglas del movimiento. Un mecanismo cobra vida cuando sus componentes pueden girar, deslizarse y actuar entre sí de forma predecible. Su rol como directores es definir esa coreografía cinemática. Prepárense para animar sus creaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Activación de la IA ⏰ 2 minutos</h3>
+                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo con Xolo.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre: 'Hola Xolo, listo para la Misión 9', seguido de su nombre, perfil y gustos. Esperen su confirmación para proceder.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-2">
+                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 5 minutos</h2>
+                <p>Presentar los mates de movimiento y el desafío de la depuración cinemática.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Presentando los Mates de Movimiento y el Desafío ⏰ 3 minutos</h3>
+                            <p>(Proyectar Diapositiva 3) El facilitador introduce 'Revolute' y 'Slider' y el desafío de aplicarlos correctamente.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Hasta ahora, han usado 'Fastened' para fijar piezas. Hoy reemplazaremos esas uniones fijas por uniones dinámicas: 'Revolute Mate' para giros, como una bisagra, y 'Slider Mate' para deslizamientos, como un cajón. Su misión es volver a su ensamblaje, eliminar los 'Mates' fijos de las piezas que deben moverse y reemplazarlos por los correctos. El éxito no es solo que se mueva, sino que se mueva *como debe*. Depurar el movimiento es un desafío clave.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Declaración del "I Can Statement" ⏰ 2 minutos</h3>
+                            <p>(Proyectar Diapositiva 4) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">El objetivo de hoy es muy dinámico. Al final, podrán decir: <strong>'Yo puedo aplicar Mates de 'Revolute' y 'Slider' para crear un ensamblaje funcional con movimiento y sé cómo colaborar con la IA para resolver problemas de diseño cinemático.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-3">
+                <h2>⚡ Actividad 3: A.I. GYM (Refuerzo de la Colaboración IA) ⏰ 10 minutos</h2>
+                <p>Fase de diálogo con Xolo para reforzar la metodología de consulta de la Dupla Dinámica y anticipar problemas comunes.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: El Ciclo de Consulta Cinemática ⏰ 5 minutos</h3>
+                            <p>(Proyectar Diapositiva 5) Los estudiantes consultan a Xolo sobre el flujo de trabajo para definir un movimiento.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Entramos al A.I. GYM. La colaboración con su equipo de IA es fundamental hoy. Para entender el flujo de trabajo, consúltenle a Xolo: <strong>'Xolo, explícame el proceso de tres pasos de la Dupla Dinámica para definir un movimiento, desde la estrategia contigo hasta la técnica con el Advisor y la Biblioteca.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Anticipando y Normalizando la Depuración ⏰ 5 minutos</h3>
+                            <p>(Proyectar Diapositiva 6) El facilitador normaliza el proceso de depuración y muestra cómo consultar al Advisor sobre problemas comunes.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Es común que el movimiento inicial esté invertido o sea incorrecto. No se frustren, es parte del proceso de un ingeniero. Aprendan a analizar el movimiento y a preguntarle al Advisor. Por ejemplo, si un mate está al revés, pueden preguntar: <strong>'How to flip the direction of a mate?'</strong> o <strong>'How to edit an existing mate?'</strong>. La depuración es una habilidad, no un signo de error.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-4">
+                 <h2>⚡ Actividad 4: Brain Spark (Implementación del Movimiento) ⏰ 17 minutos</h2>
+                <p>Fase de trabajo práctico donde los estudiantes editan su ensamblaje, aplican mates de movimiento y lo depuran.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Edición, Aplicación y Prueba ⏰ 17 minutos</h3>
+                            <p>(Proyectar Diapositiva 7) Los estudiantes trabajan de forma autónoma para dar movimiento a su ensamblaje.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora, al Brain Spark. Abran su ensamblaje. Primero, identifiquen y eliminen los 'Fastened Mates' de las piezas que deben moverse. Segundo, dialoguen con Xolo para definir la estrategia de movimiento (ej: 'mi palanca debe pivotar'). Tercero, usen el ciclo de consulta para aplicar el 'Revolute' o 'Slider' mate correcto. Finalmente, arrastren el componente y observen. Si no funciona como se espera, inicien un ciclo de depuración. El objetivo es un ensamblaje con movimiento predecible. Tienen 17 minutos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-5">
+                <h2>⚡ Actividad 5: Gnius STORM (Cierre de Sesión) ⏰ 5 minutos</h2>
+                <p>Fase final para hacer una demostración en vivo de los mecanismos y reflexionar sobre el proceso de depuración cinemática.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Think (Reflexión Individual) ⏰ 1 minuto</h3>
+                            <p>(Proyectar Diapositiva 8) El facilitador guía una reflexión sobre el proceso de resolución de problemas.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">
+                                     Tiempo. Observen su ensamblaje funcional. Prepárense para explicar su proceso de depuración: <strong>¿Qué problema encontraron al aplicar el mate y cómo lo resolvieron? ¿Qué consulta específica al Advisor les dio la clave?</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Pair (Demo en Vivo) ⏰ 2 minutos</h3>
+                            <p>(Proyectar Diapositiva 9) Los estudiantes se demuestran mutuamente el movimiento de sus ensamblajes.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">
+                                    En parejas, compartan sus pantallas. Hagan una demostración en vivo de su mecanismo. Arrastren la pieza para mostrar cómo gira o se desliza. Expliquen a su compañero el proceso de depuración que siguieron para lograrlo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Share (Síntesis y Cierre) ⏰ 2 minutos</h3>
+                            <p>(Proyectar Diapositiva 10) El facilitador consolida la sesión, enfatizando la importancia de la depuración como parte del diseño.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">
+                                    Han dado el paso final para crear un mecanismo. Sus diseños ya no son estáticos, son funcionales. Han experimentado el ciclo completo de diseño cinemático: definir una necesidad, seleccionar la herramienta, implementarla y depurarla. Esta es la esencia de la ingeniería mecánica. Ahora que dominan el movimiento simple, podemos explorar mecanismos más avanzados y, finalmente, la estética de la función.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
